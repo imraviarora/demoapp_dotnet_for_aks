@@ -1,4 +1,4 @@
-apiVersion: apps/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
     name: demoapp-deployment
@@ -16,7 +16,8 @@ spec:
         spec:
             containers:
             - name: k8s-demo
-              image: demoocr.azurecr.io/demoapp:latest
+              #image: ravikumar7206.azurecr.io/demoapp:latest
+              image: ravikumar7206/demoapp:#{Build.BuildId}#    #build with replace token in Azure DevOps
               ports:
               - containerPort: 80
             imagePullSecrets:

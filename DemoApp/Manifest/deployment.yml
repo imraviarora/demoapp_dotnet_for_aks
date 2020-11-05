@@ -21,7 +21,7 @@ spec:
               ports:
               - containerPort: 80
             imagePullSecrets:
-            - name: regdemo
+            - name: regsecret
 ---
 apiVersion: v1
 kind: Service
